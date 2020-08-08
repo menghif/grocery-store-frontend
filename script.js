@@ -1,3 +1,6 @@
+// Name: Francesco Menghi
+// Student ID: 141758193
+// WEB222 Assignment 5
 
 // create HTML elements and append content in it
 function setupItems(itemsArray) {
@@ -13,7 +16,9 @@ function setupItems(itemsArray) {
 
     itemTitle.innerHTML = item.name;
     description.innerHTML = item.description;
-    price.innerHTML = item.price;
+    price.innerHTML = new Intl.NumberFormat('en-CA', { style: 'currency', currency: 'CAD' }).format(
+      item.price
+    );
     imageElem.src = item.image;
     imageElem.height = '225';
     addToBag.innerHTML = 'ADD TO BAG';
@@ -38,9 +43,9 @@ function clearTable() {
 }
 
 // only get Food items into a new array
-var foodArr = window.products.filter(item => item.type === 'Food');
+var foodArr = window.products.filter(item => item.type === types.food);
 // only get Drink items into a new array
-var drinkArr = window.products.filter(item => item.type === 'Drink');
+var drinkArr = window.products.filter(item => item.type === types.drink);
 
 // call setupItems function with new array
 function getItemsByType(id, itemsArray, title) {
@@ -55,8 +60,8 @@ function getItemsByType(id, itemsArray, title) {
   });
 }
 
-getItemsByType('#foodMenu', foodArr, 'Food');
-getItemsByType('#drinkMenu', drinkArr, 'Drinks');
+getItemsByType('#foodMenu', foodArr, types.food);
+getItemsByType('#drinkMenu', drinkArr, types.drink);
 getItemsByType('#allProductsMenu', window.products, 'All Products');
 
 window.onload = setupItems(window.products);
