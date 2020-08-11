@@ -43,9 +43,9 @@ function clearTable() {
 }
 
 // only get Food items into a new array
-var foodArr = window.products.filter(item => item.type === types.food);
+var foodArr = window.products.filter(item => item.type === window.types.food);
 // only get Drink items into a new array
-var drinkArr = window.products.filter(item => item.type === types.drink);
+var drinkArr = window.products.filter(item => item.type === window.types.drink);
 
 // call setupItems function with new array
 function getItemsByType(id, itemsArray, title) {
@@ -60,8 +60,8 @@ function getItemsByType(id, itemsArray, title) {
   });
 }
 
-getItemsByType('#foodMenu', foodArr, types.food);
-getItemsByType('#drinkMenu', drinkArr, types.drink);
+getItemsByType('#foodMenu', foodArr, window.types.food);
+getItemsByType('#drinkMenu', drinkArr, window.types.drink);
 getItemsByType('#allProductsMenu', window.products, 'All Products');
 
 window.onload = setupItems(window.products);
