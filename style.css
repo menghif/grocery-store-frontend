@@ -328,6 +328,10 @@ footer p {
   padding-bottom: 2em;
 }
 
+.form-check {
+  margin-bottom: 0.5em;
+}
+
 #reason {
   margin-top: 2em;
 }
