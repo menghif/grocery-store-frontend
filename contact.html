@@ -2,7 +2,7 @@
 Student ID: 141758193
 WEB222 Final Assignment -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -14,7 +14,10 @@ WEB222 Final Assignment -->
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" type="text/css" />
-    <script src="https://kit.fontawesome.com/0c19c320fe.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/0c19c320fe.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Gastronomia Giovanni</title>
   </head>
 
@@ -199,12 +202,18 @@ WEB222 Final Assignment -->
                 value="order-problem"
                 onclick="addOrderNumber()"
               />
-              <label class="form-check-label" for="order-problem">Order Problem</label>
+              <label class="form-check-label" for="order-problem"
+                >Order Problem</label
+              >
             </div>
           </div>
         </div>
         <div class="row">
-          <div id="orderNumberDiv" class="form-group col-6" style="display:none">
+          <div
+            id="orderNumberDiv"
+            class="form-group col-6"
+            style="display: none"
+          >
             <label for="order-id">Order Number</label>
             <input
               id="order-id"
@@ -213,22 +222,24 @@ WEB222 Final Assignment -->
               type="tel"
               pattern="[0-9]{12}"
             />
-            <small class="form-text text-muted">Please enter your 12-digit order number</small>
+            <small class="form-text text-muted"
+              >Please enter your 12-digit order number</small
+            >
           </div>
         </div>
         <script>
           function addOrderNumber() {
-            var orderNumberDiv = document.querySelector('#orderNumberDiv');
-            var orderNumberInput = document.querySelector('#order-id');
+            var orderNumberDiv = document.querySelector("#orderNumberDiv");
+            var orderNumberInput = document.querySelector("#order-id");
 
             // if Order Problem is selected, display Order Number input and set it as required
-            if (document.querySelector('#order-problem').checked) {
-              orderNumberDiv.style.display = 'block';
+            if (document.querySelector("#order-problem").checked) {
+              orderNumberDiv.style.display = "block";
               orderNumberInput.required = true;
             }
             // else hide Order Number input and set it as not required
             else {
-              orderNumberDiv.style.display = 'none';
+              orderNumberDiv.style.display = "none";
               orderNumberInput.required = false;
             }
           }
@@ -237,7 +248,13 @@ WEB222 Final Assignment -->
         <div class="row">
           <div class="form-group col">
             <label for="message">Message</label>
-            <textarea id="message" class="form-control" name="message" rows="8" required></textarea>
+            <textarea
+              id="message"
+              class="form-control"
+              name="message"
+              rows="8"
+              required
+            ></textarea>
           </div>
         </div>
 
@@ -246,7 +263,13 @@ WEB222 Final Assignment -->
         </div>
 
         <div class="d-flex flex-row-reverse">
-          <input class="btn btn-secondary" type="submit" id="submit" name="submit" value="Submit" />
+          <input
+            class="btn btn-secondary"
+            type="submit"
+            id="submit"
+            name="submit"
+            value="Submit"
+          />
         </div>
       </form>
     </div>
@@ -256,18 +279,30 @@ WEB222 Final Assignment -->
         <a href="./about.html">About Us</a>
         <a href="./contact.html">Contact Us</a>
         <div id="socialLinks">
-          <a href="https://www.facebook.com/" target="_blank" class="socialIcon">
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            class="socialIcon"
+          >
             <i class="fab fa-facebook"></i>
           </a>
           <a href="https://www.twitter.com/" target="_blank" class="socialIcon">
             <i class="fab fa-twitter"></i>
           </a>
-          <a href="https://www.instagram.com/" target="_blank" class="socialIcon">
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            class="socialIcon"
+          >
             <i class="fab fa-instagram"></i>
           </a>
         </div>
       </div>
-      <form id="newsletter" action="https://formspree.io/xlepzvok" method="POST">
+      <form
+        id="newsletter"
+        action="https://formspree.io/xlepzvok"
+        method="POST"
+      >
         <div class="form-group" id="rightFooter">
           <label for="inputEmail">Newsletter:</label>
           <input
