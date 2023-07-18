@@ -21,6 +21,8 @@ function setupItems(itemsArray) {
       currency: "CAD",
     }).format(item.price);
     imageElem.src = item.image;
+    imageElem.alt = item.name;
+    imageElem.width = "225";
     imageElem.height = "225";
     addToBag.innerHTML = "ADD TO BAG";
 
@@ -47,7 +49,7 @@ function clearTable() {
 var foodArr = window.products.filter((item) => item.type === window.types.food);
 // only get Drink items into a new array
 var drinkArr = window.products.filter(
-  (item) => item.type === window.types.drink,
+  (item) => item.type === window.types.drink
 );
 
 // call setupItems function with new array
