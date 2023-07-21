@@ -309,9 +309,9 @@ footer p {
 #contactUs p {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
-  margin-left: 66px;
   line-height: 1.5;
   padding-left: 0;
+  margin: 1em 0 0.5em 0;
 }
 
 #contactUs h2 {
@@ -323,17 +323,8 @@ footer p {
   margin: 0 66px 66px;
 }
 
-#contact-form p {
-  margin: 0;
-  padding-bottom: 2em;
-}
-
 .form-check {
   margin-bottom: 0.5em;
-}
-
-#reason {
-  margin-top: 2em;
 }
 
 #submit {
