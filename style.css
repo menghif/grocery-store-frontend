@@ -13,7 +13,7 @@ html {
 html body {
   margin: 0;
   display: flex;
-  max-width: 1560px;
+  max-width: 1360px;
   flex-direction: column;
   margin: auto;
   background-color: #fff2e5;
@@ -173,15 +173,16 @@ body header {
 }
 
 #allItemsDisplay {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
 }
 
 /* single product display card */
 
 #allItemsDisplay div {
+  height: 100%;
+  max-width: 340px;
   border: 1px solid #b7472a;
   border-radius: 0.3em;
   border-style: inset;
@@ -190,9 +191,8 @@ body header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 10px;
-  width: 265px;
 }
+
 #allItemsDisplay div h3 {
   font-family: "Antic Didone", serif;
   font-size: 22px;
@@ -212,14 +212,16 @@ body header {
 
 .button {
   cursor: pointer;
-  margin: 15px 0px;
+  margin-top: 15px;
   padding: 5px;
+  width: 225px;
   font-weight: 400;
   color: whitesmoke;
   border: 1px solid black;
   border-style: outset;
   background-color: #333333;
   border-radius: 0.2em;
+  align-self: center;
 }
 
 .button:hover {
@@ -228,6 +230,7 @@ body header {
 
 #allItemsDisplay img {
   border-radius: 0.3em;
+  align-self: center;
 }
 
 /* footer stlye */
@@ -334,7 +337,7 @@ footer p {
 
 /* change display header and banner for small screen devices */
 
-@media screen and (max-width: 685px) {
+@media screen and (max-width: 700px) {
   body header {
     flex-direction: column;
     position: unset;
@@ -357,16 +360,6 @@ footer p {
     padding: 10px;
   }
 
-  #container {
-    margin: 0 0 46px;
-  }
-
-  #allItemsDisplay {
-    flex-direction: column;
-    align-items: center;
-    margin-left: 0;
-  }
-
   h2 {
     text-align: center;
     margin-left: 0;
@@ -379,7 +372,7 @@ footer p {
 
 /* change display footer for small screen devices */
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 880px) {
   body footer {
     flex-direction: column;
   }
@@ -411,5 +404,38 @@ footer p {
   #companyInfo a {
     padding-right: 7px;
     padding-left: 7px;
+  }
+}
+
+@media screen and (max-width: 1205px) {
+  #allItemsDisplay {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 925px) {
+  #allItemsDisplay {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #allItemsDisplay div:nth-child(2n + 1) {
+    justify-self: end;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 645px) {
+  #allItemsDisplay {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  #allItemsDisplay div {
+    justify-self: center;
+    width: 100%;
+  }
+
+  #allItemsDisplay div:nth-child(2n + 1) {
+    justify-self: center;
   }
 }

@@ -45,13 +45,6 @@ window.products = [
   },
   {
     type: window.types.food,
-    name: "Tagliatelle",
-    description: "Fresh homemade egg tagliatelle pasta (500g)",
-    price: 12,
-    image: "./images/olesya-yemets-fzXVmIUsEbM-unsplash.webp",
-  },
-  {
-    type: window.types.food,
     name: "Pesto",
     price: 11,
     description: "Genovese Pesto made with 80% pine nuts from Liguria (250g)",
