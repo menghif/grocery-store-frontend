@@ -1,7 +1,3 @@
-// Name: Francesco Menghi
-// Student ID: 141758193
-// WEB222 Assignment 5
-
 // create HTML elements and append content in it
 function setupItems(itemsArray) {
   itemsArray.forEach((item) => {
