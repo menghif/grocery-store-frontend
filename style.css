@@ -2,6 +2,16 @@
 
 /* Color palette: https://colorhunt.co/palette/171393 */
 
+/* CSS Variables */
+:root {
+  --primary-color: #b7472a;
+  --secondary-color: #ffd5ab;
+  --text-color: #555;
+  --link-color: whitesmoke;
+  --button-background: #333333;
+  --button-background-hover: #666666;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -22,19 +32,19 @@ h2 {
   margin-bottom: 25px;
   font-family: "Roboto", sans-serif;
   font-weight: 800;
-  color: #555;
-  text-shadow: 0px 1px 2px whitesmoke;
+  color: var(--text-color);
+  text-shadow: 0px 1px 2px var(--link-color);
 }
 
 a {
   font-family: "Roboto", sans-serif;
-  color: whitesmoke;
+  color: var(--link-color);
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: none;
-  color: whitesmoke;
+  color: var(--link-color);
 }
 
 p {
@@ -47,14 +57,14 @@ p {
 
 body header {
   display: flex;
-  color: whitesmoke;
-  background-color: #b7472a;
+  color: var(--link-color);
+  background-color: var(--primary-color);
   justify-content: space-between;
   position: fixed;
   width: 100%;
   max-width: 1560px;
-  text-shadow: 0px 1px 2px #555;
-  box-shadow: 0px 1px 2px #555;
+  text-shadow: 0px 1px 2px var(--text-color);
+  box-shadow: 0px 1px 2px var(--text-color);
   z-index: 100;
   align-items: center;
 }
@@ -128,11 +138,11 @@ body header {
   bottom: 8px;
   right: 8px;
   text-align: right;
-  background-color: #555;
+  background-color: var(--text-color);
   font-size: 14px;
   padding: 3px 8px;
   border-radius: 0.2em;
-  color: whitesmoke;
+  color: var(--link-color);
 }
 
 #imageLocation a:hover {
@@ -151,7 +161,7 @@ body header {
 /* description banner */
 
 #banner {
-  background-color: #ffd5ab;
+  background-color: var(--secondary-color);
   box-shadow: 0px 1px 2px #cccccc;
   margin-top: 6px;
 }
@@ -196,7 +206,7 @@ body header {
 }
 
 #allItemsDisplay div p {
-  color: #333333;
+  color: var(--button-background);
   font-size: 0.9em;
 }
 
@@ -212,16 +222,16 @@ body header {
   padding: 5px;
   width: 225px;
   font-weight: 400;
-  color: whitesmoke;
+  color: var(--link-color);
   border: 1px solid black;
   border-style: outset;
-  background-color: #333333;
+  background-color: var(--button-background);
   border-radius: 0.2em;
   align-self: center;
 }
 
 .button:hover {
-  background-color: #666666;
+  background-color: var(--button-background-hover);
 }
 
 #allItemsDisplay img {
@@ -236,7 +246,7 @@ body footer {
   color: white;
   font-family: "Asap", sans-serif;
   font-size: 16px;
-  background-color: #b7472a;
+  background-color: var(--primary-color);
   margin-left: 20px;
   margin-right: 20px;
   padding: 0 10px;
@@ -244,8 +254,8 @@ body footer {
   border-top-right-radius: 0.5em;
   justify-content: space-between;
   align-items: center;
-  text-shadow: 0px 1px 2px #555;
-  box-shadow: 0px 1px 2px #555;
+  text-shadow: 0px 1px 2px var(--text-color);
+  box-shadow: 0px 1px 2px var(--text-color);
 }
 
 footer p {
@@ -340,7 +350,7 @@ footer p {
   }
 
   #left-header {
-    border-bottom: 1px solid whitesmoke;
+    border-bottom: 1px solid var(--link-color);
     justify-content: flex-end;
     margin: 0;
   }
