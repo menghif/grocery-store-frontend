@@ -180,6 +180,11 @@ body header {
   gap: 1.2rem;
 }
 
+.productImage {
+  width: 225px;
+  height: 225px;
+}
+
 /* single product display card */
 
 #allItemsDisplay div {
