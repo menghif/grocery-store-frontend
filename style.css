@@ -27,14 +27,12 @@ html body {
 }
 
 h2 {
-  font-size: 24px;
-  margin-top: 30px;
-  margin-left: 66px;
-  margin-bottom: 25px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 800;
+  font:
+    800 24px "Roboto",
+    sans-serif;
+  margin: 30px 0 25px 66px;
   color: var(--text-color);
-  text-shadow: 0px 1px 2px var(--link-color);
+  text-shadow: 0 1px 2px var(--link-color);
 }
 
 a {
@@ -85,8 +83,7 @@ body header {
 #logo {
   display: flex;
   align-items: center;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding: 0 15px;
   font-size: 0.8em;
 }
 
@@ -118,8 +115,7 @@ body header {
 
 #shopping-basket {
   padding: 20px;
-  margin-right: 10px;
-  margin-left: 10px;
+  margin: 0 10px;
   font-size: 1.1em;
 }
 
@@ -244,18 +240,18 @@ body header {
 body footer {
   display: flex;
   color: white;
-  font-family: "Asap", sans-serif;
-  font-size: 16px;
+  font:
+    16px "Asap",
+    sans-serif;
   background-color: var(--primary-color);
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 0 20px;
   padding: 0 10px;
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
   justify-content: space-between;
   align-items: center;
-  text-shadow: 0px 1px 2px var(--text-color);
-  box-shadow: 0px 1px 2px var(--text-color);
+  text-shadow: 0 1px 2px var(--text-color);
+  box-shadow: 0 1px 2px var(--text-color);
 }
 
 footer p {
@@ -266,9 +262,9 @@ footer p {
   display: flex;
   padding: 15px;
 }
+
 #companyInfo a {
-  padding-right: 12px;
-  padding-left: 12px;
+  padding: 0 12px;
 }
 
 #companyInfo a:hover {
@@ -304,22 +300,18 @@ footer p {
 }
 
 #aboutUs p {
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  margin-left: 66px;
+  font:
+    18px/1.5 "Roboto",
+    sans-serif;
+  margin: 0 66px;
   max-width: 800px;
-  line-height: 1.5;
-  padding-left: 0;
-  margin-right: 66px;
-
   padding-bottom: 150px;
-  height: 100%;
 }
+
 #contactUs p {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   line-height: 1.5;
-  padding-left: 0;
   margin: 1em 0 0.5em 0;
 }
 
@@ -361,8 +353,7 @@ footer p {
   }
 
   #banner p {
-    margin-left: 7px;
-    margin-right: 7px;
+    margin: 0 7px;
     padding: 10px;
   }
 
@@ -408,8 +399,7 @@ footer p {
   }
 
   #companyInfo a {
-    padding-right: 7px;
-    padding-left: 7px;
+    padding: 0 7px;
   }
 }
 
