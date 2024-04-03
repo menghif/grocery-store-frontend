@@ -26,6 +26,20 @@ html body {
   background-color: #fff2e5;
 }
 
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
 h2 {
   font:
     800 24px "Roboto",
@@ -61,7 +75,7 @@ body header {
   justify-content: space-between;
   position: fixed;
   width: 100%;
-  max-width: 1560px;
+  max-width: 1360px;
   text-shadow: 0px 1px 2px var(--text-color);
   box-shadow: 0px 1px 2px var(--text-color);
   z-index: 100;
@@ -242,7 +256,8 @@ body header {
 
 /* footer style */
 
-body footer {
+footer {
+  flex-shrink: 0;
   display: flex;
   color: white;
   font:
@@ -250,7 +265,7 @@ body footer {
     sans-serif;
   background-color: var(--primary-color);
   margin: 0 20px;
-  padding: 0 10px;
+  padding: 5px 10px;
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
   justify-content: space-between;
