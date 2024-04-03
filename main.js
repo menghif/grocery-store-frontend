@@ -2,24 +2,27 @@
   // create HTML elements and append content in it
   const setupItems = (productsArray) => {
     productsArray.forEach((product) => {
-      const productsDiv = document.createElement("div");
       const productTitle = document.createElement("h3");
       const description = document.createElement("p");
       const price = document.createElement("p");
-      price.className = "priceTag";
       const imageElem = document.createElement("img");
       const addToBag = document.createElement("button");
-      addToBag.className = "button";
+      const productsDiv = document.createElement("div");
 
       productTitle.textContent = product.name;
       description.textContent = product.description;
+
+      price.className = "priceTag";
       price.textContent = new Intl.NumberFormat("en-CA", {
         style: "currency",
         currency: "CAD",
       }).format(product.price);
+
       imageElem.className = "productImage";
       imageElem.src = product.image;
       imageElem.alt = product.name;
+
+      addToBag.className = "button";
       addToBag.textContent = "ADD TO BAG";
 
       productsDiv.appendChild(productTitle);
@@ -42,10 +45,7 @@
   const getItemsByType = (id, productsArray, title) => {
     document.querySelector(id).addEventListener("click", () => {
       const listTitle = document.querySelector("#listTitle");
-      const newTitle = document.createElement("h2");
-      listTitle.textContent = "";
-      newTitle.textContent = title;
-      listTitle.appendChild(newTitle);
+      listTitle.textContent = title;
       clearTable();
       setupItems(productsArray);
     });
