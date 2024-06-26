@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="A simple Grocery Store Frontend using HTML, CSS and Javascript"
+    />
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/assets/styles/global.css">
+    <title>Gastronomia Giovanni</title>
+    {% if page.url == '/' %}
+    <script src="/assets/scripts/products.js" type="module"></script>
+    <script src="/assets/scripts/main.js" type="module"></script>
+    {% endif %}
+  </head>
+
+  <body>
+    {% include "header.njk" %}
+
+    <main class="main container" role="main" id="main" tabindex="-1">
+      {{ content | safe }}
+    </main>
+
+    {% include "footer.njk" %}
+  </body>
+</html>

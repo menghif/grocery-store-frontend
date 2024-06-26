@@ -1,0 +1,26 @@
+<header>
+  <div id="left-header">
+    <a href="/" id="title">
+      <img id="logo" src="/assets/images/logo.png" alt="Logo" width="35" height="35" />
+      Gastronomia Giovanni
+    </a>
+  </div>
+  <div id="right-header">
+    <div id="categories">
+      <a href="/#banner" id="allProductsMenu">All Products</a>
+      {% if page.url == '/' %}
+      <a href="/#banner" id="foodMenu">Food</a>
+      <a href="/#banner" id="drinkMenu">Drinks</a>
+      {% endif %}
+
+      <a href="" id="shopping-basket">
+        <img
+          src="/assets/images/basket-shopping-solid.svg"
+          alt="Shopping basket"
+          width="25px"
+          height="25px"
+        />
+      </a>
+    </div>
+  </div>
+</header>

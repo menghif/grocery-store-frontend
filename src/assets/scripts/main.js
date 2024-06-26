@@ -1,16 +1,22 @@
 (function () {
+  const cart = [];
+
   // create HTML elements and append content in it
   const setupItems = (productsArray) => {
     productsArray.forEach((product) => {
+      const productsDiv = document.createElement("div");
+      const top = document.createElement("div");
       const productTitle = document.createElement("h3");
       const description = document.createElement("p");
+      const bottom = document.createElement("div");
       const price = document.createElement("p");
       const imageElem = document.createElement("img");
       const addToBag = document.createElement("button");
-      const productsDiv = document.createElement("div");
 
       productTitle.textContent = product.name;
       description.textContent = product.description;
+      top.className = "top";
+      bottom.className = "bottom";
 
       price.className = "priceTag";
       price.textContent = new Intl.NumberFormat("en-CA", {
@@ -25,11 +31,20 @@
       addToBag.className = "button";
       addToBag.textContent = "ADD TO BAG";
 
-      productsDiv.appendChild(productTitle);
-      productsDiv.appendChild(description);
-      productsDiv.appendChild(price);
-      productsDiv.appendChild(imageElem);
-      productsDiv.appendChild(addToBag);
+      addToBag.addEventListener("click", () => {
+        cart.push(productTitle.textContent);
+
+        console.log(cart);
+      });
+
+      productsDiv.className = "productCard";
+      top.appendChild(productTitle);
+      top.appendChild(description);
+      bottom.appendChild(price);
+      bottom.appendChild(imageElem);
+      bottom.appendChild(addToBag);
+      productsDiv.appendChild(top);
+      productsDiv.appendChild(bottom);
 
       const allItemsDiv = document.querySelector("#allItemsDisplay");
       allItemsDiv.appendChild(productsDiv);
