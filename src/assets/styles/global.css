@@ -240,31 +240,28 @@ footer {
     16px "Asap",
     sans-serif;
   background-color: var(--primary-color);
-  margin: 0 20px;
-  padding: 5px 10px;
-  border-top-left-radius: 0.5em;
-  border-top-right-radius: 0.5em;
+  padding: 0.25rem 0.5rem;
+  border-top-left-radius: 0.25em;
+  border-top-right-radius: 0.25em;
   justify-content: space-between;
   align-items: center;
   text-shadow: 0 1px 2px var(--text-color);
   box-shadow: 0 1px 2px var(--text-color);
 }
 
-footer p {
-  padding: 18px;
-}
-
 #companyInfo {
   display: flex;
-  padding: 15px;
+  flex-wrap: wrap;
+  padding: 1rem 0.5rem;
 }
 
 #companyInfo a {
-  padding: 0 12px;
+  padding: 0.5rem 0.75rem;
 }
 
-.socialIcon {
-  font-size: 1.1em;
+#socialLinks a img {
+  margin-top: 0.35rem;
+  vertical-align: text-top;
 }
 
 #rightFooter {
@@ -459,7 +456,7 @@ input {
 
 /* change display footer for small screen devices */
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 850px) {
   body footer {
     flex-direction: column;
   }
