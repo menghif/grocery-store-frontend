@@ -164,9 +164,9 @@ header {
 }
 
 #allItemsDisplay {
-  /* margin: 3rem; */
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
+  justify-items: center;
   gap: 1.5rem;
 }
 
@@ -482,24 +482,5 @@ input {
 @media screen and (max-width: 420px) {
   .row {
     flex-direction: column;
-  }
-}
-
-@media screen and (max-width: 1205px) {
-  #allItemsDisplay {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media screen and (max-width: 925px) {
-  #allItemsDisplay {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (max-width: 645px) {
-  #allItemsDisplay {
-    grid-template-columns: 1fr;
-    justify-items: center;
   }
 }
