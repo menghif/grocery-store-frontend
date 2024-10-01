@@ -1,6 +1,6 @@
-const EleventyVitePlugin = require("@11ty/eleventy-plugin-vite");
+import EleventyVitePlugin from "@11ty/eleventy-plugin-vite";
 
-module.exports = function (config) {
+export default function (config) {
   config.addPlugin(EleventyVitePlugin);
 
   // Layouts
@@ -23,4 +23,4 @@ module.exports = function (config) {
     templateFormats: ["njk", "11ty.js"],
     htmlTemplateEngine: "njk",
   };
-};
+}
