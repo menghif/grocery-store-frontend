@@ -12,6 +12,6 @@
     "prettier": "3.3.3"
   },
   "dependencies": {
-    "@11ty/eleventy-plugin-vite": "^4.0.0"
+    "@11ty/eleventy-plugin-vite": "^5.0.0-alpha.5"
   }
 }
