@@ -8,8 +8,8 @@
     "preview": "npx http-server _site"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "prettier": "3.2.5"
+    "@11ty/eleventy": "^3.0.0",
+    "prettier": "3.3.3"
   },
   "dependencies": {
     "@11ty/eleventy-plugin-vite": "^4.0.0"
