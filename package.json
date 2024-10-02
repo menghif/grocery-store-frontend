@@ -2,16 +2,17 @@
   "name": "grocery-store-frontend",
   "private": true,
   "version": "0.0.1",
+  "type": "module",
   "scripts": {
     "dev": "eleventy --serve",
     "build": "eleventy",
     "preview": "npx http-server _site"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "prettier": "3.2.5"
+    "@11ty/eleventy": "^3.0.0",
+    "prettier": "3.3.3"
   },
   "dependencies": {
-    "@11ty/eleventy-plugin-vite": "^4.0.0"
+    "@11ty/eleventy-plugin-vite": "^5.0.0-alpha.5"
   }
 }
